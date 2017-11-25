@@ -6,17 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="contact.css">
     <script src="jquery-3.2.1.js"></script>
-    <script>
-        //make a function to create a new div
-        
-
+    <script>        
         $(document).ready(function(){
             $(document).on('click', '#submit', function(){
                 var html = " "
                 html += `<div class="contactCard">
-                            <p>${$('#firstName').val() + ' ' + $('#lastName').val()}</p>
-                            <p><button class="btn">Click for Description</button></p>
-                            <p><div class="descVal">${$('#descrip').val()}</div></p>
+                            <p>${$('#firstName').val()} ${$('#lastName').val()}</p>
+                            <button class="btn">Click for Description</button>
+                            <div class="descVal">${$('#descrip').val()}</div>
                         </div>`
                 $('.cards').append(html);
                 $('.descVal').hide();
@@ -24,20 +21,17 @@
             }); //closes doc.on(click,submit) 
 
             $(document).on('click', '.btn' , function(){
-               
-                // $('.descVal').show(); 
-                // ^ reveals descriptions on all cards
-                $(this).show('.descVal');
-                // ^wont reveal any descriptions, but the alert message will still print
-                alert('is the description showing?');
-                //maybe add function to change back to hidden.
+                $(this).siblings('.descVal').show();
+                
             });
         }); //closes document.ready
     </script>
     <title>Contact Card</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1>Add a User</h1>
+    </header>
     <form action="something.php">
         <label for="text">First Name:</label>
         <input type="text" id="firstName">
