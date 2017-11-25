@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="contact.css">
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        //make a function to create a new div
+        
+
+        $(document).ready(function(){
+            $(document).on('click', '#submit', function(){
+                var html = " "
+                html += `<div class="contactCard">
+                            <p>${$('#firstName').val() + ' ' + $('#lastName').val()}</p>
+                            <p><button class="btn">Click for Description</button></p>
+                            <p><div class="descVal">${$('#descrip').val()}</div></p>
+                        </div>`
+                $('.cards').append(html);
+                $('.descVal').hide();
+                return false;
+            }); //closes doc.on(click,submit) 
+
+            $(document).on('click', '.btn' , function(){
+               
+                // $('.descVal').show(); 
+                // ^ reveals descriptions on all cards
+                $(this).show('.descVal');
+                // ^wont reveal any descriptions, but the alert message will still print
+                alert('is the description showing?');
+                //maybe add function to change back to hidden.
+            });
+        }); //closes document.ready
+    </script>
+    <title>Contact Card</title>
+</head>
+<body>
+    <header></header>
+    <form action="something.php">
+        <label for="text">First Name:</label>
+        <input type="text" id="firstName">
+
+        <label for="text">Last Name:</label>
+        <input type="text" id="lastName">
+
+        <label for="text" >Description:</label>
+        <textarea name="descrip" id="descrip" cols="10" rows="5"></textarea>
+
+        <input type="submit" value="Add Contact" id="submit">
+    </form>
+    <div class="cards">
+        
+    </div>
+    <footer></footer>
+</body>
+</html>

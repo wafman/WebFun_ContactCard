@@ -1,0 +1,87 @@
+* {
+    width: 970px;
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+
+body {
+    width: 970px;
+    display: inline-block;
+    background-color: black;
+}
+
+header {
+    width: 970px;
+}
+
+form {
+    width: 305px;
+    display: inline-block;
+    background-color: gray;
+}
+
+form label {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    width: 90px;
+    margin: 5px 0px;
+}
+
+form input {
+    width: 200px;
+    margin: 5px 0px;
+}
+
+
+
+form textarea {
+    margin-left: 10px;
+    width: 250px;
+}
+
+#submit {
+    width: 100px;
+    border-radius: 10px;
+    margin: 10px 102.5px;
+}
+
+.cards {
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+.contactCard {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 200px;
+    font-size: 30px;
+    background-color: beige;
+    border: 2px solid slategrey;
+}
+
+.contactCard p {
+    width: 300px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.btn {
+    width: 100px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+footer {
+    width: 970px;
+    
+}
